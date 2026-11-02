@@ -7,6 +7,7 @@
   
 </head>
 <body>
+ 
     <h1>Grupo LuAc</h1>
     <p>Bienvenido A La Pagina Web Del Grupo LuAc, Aca Encontraras Diferentes Temas Variados Y Muy Randoms. (Actualmente Se Encuentra En Desarrollo)</p>
 
@@ -25,7 +26,37 @@
 	<!-- Creditos: -->
     <h6> Esta Obra De Arte Fue Hecha Por: Luis Ealo </h6>
 		<img src="pala.gif" width="200">
-            
+        <div id="resultado"></div>
+			
+			
+ <script>
+ 
+	 let nombre = prompt("Ingrese su nombre:");
+
+	 
+	 let fechaNacimiento = prompt("Ingrese su fecha de nacimiento(en formato AAAA-MM-DD):");
+
+	  
+	 let nacimiento = new Date(fechaNacimiento);
+
+		  
+	 let hoy = new Date();
+
+			
+	 let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+		   
+	 let mes = hoy.getMonth() - nacimiento.getMonth();
+
+	 if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+		edad--;
+	   }
+
+	document.getElementById("resultado").innerHTML =
+		"Nombre: " + nombre + "<br>" +
+		"Edad: " + edad + " años";
+ </script>
+ 
     <script>
         // Test mio
         document.addEventListener('contextmenu', function(e) {
