@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="main2.css">
+    <meta charset="UTF-8">
+    <title>Mi Página Principal</title>
+  
+</head>
+<body>
+    <h1>Grupo LuAc</h1>
+    <p>Bienvenido A La Pagina Web Del Grupo LuAc, Aca Encontraras Diferentes Temas Variados Y Muy Randoms. (Actualmente Se Encuentra En Desarrollo)</p>
+
+    <!-- Imagen -->
+    <h2>Sabias que: Una burbuja generada por el Camaron Pistola puede llegar a la gran temperatura de 4.700°C</h2>
+    <img src="job.jpg" alt="proceso.jpg" width="400">
+
+    <hr>
+
+    <!-- Enlaces -->
+    <h2>Temas Apartes Que No Tienen Nada Que Ver Entre Si:</h2>
+    <ul>
+        <li><a href="Tuto1.html">Tutorial Para Descargar Minecraft</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ZuIp7pkepJs" target="_blank">Si quieres reflexionar un rato.</a></li>
+    </ul>
+	<!-- Creditos: -->
+    <h6> Esta Obra De Arte Fue Hecha Por: Luis Ealo </h6>
+		<img src="pala.gif" width="200">
+            
+    <script>
+        // Test mio
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+               (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+               (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+               (e.ctrlKey && e.key === 'U') || 
+               (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+        });
+        
+      
+        setInterval(function() {
+            
+            document.body.style.display = 'none';
+            
+          
+            Function("debugger")();
+            
+         
+            document.body.style.display = 'block';
+        }, 50);
+    </script>
+</body>
+</html>
