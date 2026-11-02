@@ -28,34 +28,39 @@
 		<img src="pala.gif" width="200">
         <div id="resultado"></div>
 			
-			
- <script>
- 
-	 let nombre = prompt("Ingrese su nombre:");
+	<script>
+    let nombre = prompt("Ingrese su nombre:");
 
-	 
-	 let fechaNacimiento = prompt("Ingrese su fecha de nacimiento(en formato AAAA-MM-DD):");
+    let fechaNacimiento = prompt("Ingrese su fecha de nacimiento (en formato AAAA-MM-DD):");
 
-	  
-	 let nacimiento = new Date(fechaNacimiento);
+    let nacimiento = new Date(fechaNacimiento);
 
-		  
-	 let hoy = new Date();
+    let hoy = new Date();
 
-			
-	 let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
 
-		   
-	 let mes = hoy.getMonth() - nacimiento.getMonth();
+    let mes = hoy.getMonth() - nacimiento.getMonth();
 
-	 if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
-		edad--;
-	   }
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
 
-	document.getElementById("resultado").innerHTML =
-		"Nombre: " + nombre + "<br>" +
-		"Edad: " + edad + " años";
- </script>
+    // Verificar si es mayor de edad
+    if (edad >= 18) {
+
+        alert("Acceso permitido. Bienvenido " + nombre);
+
+        document.getElementById("resultado").innerHTML =
+            "Nombre: " + nombre + "<br>" +
+            "Edad: " + edad + " años";
+
+    } else {
+
+        alert("Lo sentimos, eres menor de edad. Acceso denegado.");
+
+        window.location.href = "https://www.google.com/";
+    }
+</script>
  
     <script>
         // Test mio
